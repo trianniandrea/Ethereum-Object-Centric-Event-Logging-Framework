@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #FFFFFF;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#FF595E", "font": {"color": "black"}, "id": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "boarding_card_2", "shape": "dot", "title": "\u003cId: boarding_card_2, NodeType.object_id\u003e"}, {"color": "#FF595E", "font": {"color": "black"}, "id": "\u003cId: Ticket_0, NodeType.object_id\u003e", "label": "Ticket_0", "shape": "dot", "title": "\u003cId: Ticket_0, NodeType.object_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 6, NodeType.event_id\u003e", "label": "6", "shape": "dot", "title": "\u003cId: 6, NodeType.event_id\u003e"}, {"color": "#FF595E", "font": {"color": "black"}, "id": "\u003cId: boarding_card_0, NodeType.object_id\u003e", "label": "boarding_card_0", "shape": "dot", "title": "\u003cId: boarding_card_0, NodeType.object_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 0, NodeType.event_id\u003e", "label": "0", "shape": "dot", "title": "\u003cId: 0, NodeType.event_id\u003e"}, {"color": "#FF595E", "font": {"color": "black"}, "id": "\u003cId: Ticket_2, NodeType.object_id\u003e", "label": "Ticket_2", "shape": "dot", "title": "\u003cId: Ticket_2, NodeType.object_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 1, NodeType.event_id\u003e", "label": "1", "shape": "dot", "title": "\u003cId: 1, NodeType.event_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 3, NodeType.event_id\u003e", "label": "3", "shape": "dot", "title": "\u003cId: 3, NodeType.event_id\u003e"}, {"color": "#FF595E", "font": {"color": "black"}, "id": "\u003cId: flight_1, NodeType.object_id\u003e", "label": "flight_1", "shape": "dot", "title": "\u003cId: flight_1, NodeType.object_id\u003e"}, {"color": "#808080", "font": {"color": "black"}, "id": "\u003cId: Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71, NodeType.object_id\u003e", "label": "Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71", "shape": "dot", "title": "\u003cId: Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71, NodeType.object_id\u003e"}, {"color": "#808080", "font": {"color": "black"}, "id": "\u003cId: Luggage_0, NodeType.object_id\u003e", "label": "Luggage_0", "shape": "dot", "title": "\u003cId: Luggage_0, NodeType.object_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 10, NodeType.event_id\u003e", "label": "10", "shape": "dot", "title": "\u003cId: 10, NodeType.event_id\u003e"}, {"color": "#808080", "font": {"color": "black"}, "id": "\u003cId: Traveller_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94, NodeType.object_id\u003e", "label": "Traveller_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94", "shape": "dot", "title": "\u003cId: Traveller_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94, NodeType.object_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 2, NodeType.event_id\u003e", "label": "2", "shape": "dot", "title": "\u003cId: 2, NodeType.event_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 13, NodeType.event_id\u003e", "label": "13", "shape": "dot", "title": "\u003cId: 13, NodeType.event_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 9, NodeType.event_id\u003e", "label": "9", "shape": "dot", "title": "\u003cId: 9, NodeType.event_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 7, NodeType.event_id\u003e", "label": "7", "shape": "dot", "title": "\u003cId: 7, NodeType.event_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 8, NodeType.event_id\u003e", "label": "8", "shape": "dot", "title": "\u003cId: 8, NodeType.event_id\u003e"}, {"color": "#808080", "font": {"color": "black"}, "id": "\u003cId: Luggage_1, NodeType.object_id\u003e", "label": "Luggage_1", "shape": "dot", "title": "\u003cId: Luggage_1, NodeType.object_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 12, NodeType.event_id\u003e", "label": "12", "shape": "dot", "title": "\u003cId: 12, NodeType.event_id\u003e"}, {"color": "#FF595E", "font": {"color": "black"}, "id": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "label": "boarding_card_1", "shape": "dot", "title": "\u003cId: boarding_card_1, NodeType.object_id\u003e"}, {"color": "#8AC926", "font": {"color": "black"}, "id": "\u003cId: 11, NodeType.event_id\u003e", "label": "11", "shape": "dot", "title": "\u003cId: 11, NodeType.event_id\u003e"}, {"color": "#FF595E", "font": {"color": "black"}, "id": "\u003cId: Ticket_1, NodeType.object_id\u003e", "label": "Ticket_1", "shape": "dot", "title": "\u003cId: Ticket_1, NodeType.object_id\u003e"}]);
+        edges = new vis.DataSet([{"color": "#FF595E", "dashes": false, "from": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: flight_1, NodeType.object_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 8, NodeType.event_id\u003e", "width": 4}, {"color": "#FF595E", "dashes": false, "from": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Ticket_2, NodeType.object_id\u003e", "width": 4}, {"color": "#808080", "dashes": true, "from": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Luggage_1, NodeType.object_id\u003e", "width": 1}, {"color": "#000000", "dashes": false, "from": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 12, NodeType.event_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 10, NodeType.event_id\u003e", "width": 4}, {"color": "#808080", "dashes": true, "from": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Traveller_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94, NodeType.object_id\u003e", "width": 1}, {"color": "#FF595E", "dashes": false, "from": "\u003cId: boarding_card_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Ticket_1, NodeType.object_id\u003e", "width": 4}, {"color": "#808080", "dashes": true, "from": "\u003cId: Ticket_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71, NodeType.object_id\u003e", "width": 1}, {"color": "#000000", "dashes": false, "from": "\u003cId: Ticket_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 0, NodeType.event_id\u003e", "width": 4}, {"color": "#FF595E", "dashes": false, "from": "\u003cId: Ticket_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: boarding_card_0, NodeType.object_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: 6, NodeType.event_id\u003e", "label": "", "to": "\u003cId: Ticket_1, NodeType.object_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: 6, NodeType.event_id\u003e", "label": "", "to": "\u003cId: Ticket_2, NodeType.object_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: boarding_card_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 3, NodeType.event_id\u003e", "width": 4}, {"color": "#808080", "dashes": true, "from": "\u003cId: boarding_card_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71, NodeType.object_id\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: boarding_card_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Luggage_0, NodeType.object_id\u003e", "width": 1}, {"color": "#000000", "dashes": false, "from": "\u003cId: boarding_card_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 2, NodeType.event_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: boarding_card_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 1, NodeType.event_id\u003e", "width": 4}, {"color": "#808080", "dashes": true, "from": "\u003cId: Ticket_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Traveller_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94, NodeType.object_id\u003e", "width": 1}, {"color": "#FF595E", "dashes": false, "from": "\u003cId: Ticket_2, NodeType.object_id\u003e", "label": "", "to": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: flight_1, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 13, NodeType.event_id\u003e", "width": 4}, {"color": "#FF595E", "dashes": false, "from": "\u003cId: flight_1, NodeType.object_id\u003e", "label": "", "to": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "width": 4}, {"color": "#808080", "dashes": true, "from": "\u003cId: Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Luggage_0, NodeType.object_id\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71, NodeType.object_id\u003e", "label": "", "to": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Ticket_1, NodeType.object_id\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: Luggage_0, NodeType.object_id\u003e", "label": "", "to": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: Traveller_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Luggage_1, NodeType.object_id\u003e", "width": 1}, {"color": "#000000", "dashes": false, "from": "\u003cId: 9, NodeType.event_id\u003e", "label": "", "to": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: 7, NodeType.event_id\u003e", "label": "", "to": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "width": 4}, {"color": "#000000", "dashes": false, "from": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "label": "", "to": "\u003cId: 11, NodeType.event_id\u003e", "width": 4}, {"color": "#FF595E", "dashes": false, "from": "\u003cId: boarding_card_1, NodeType.object_id\u003e", "label": "", "to": "\u003cId: Ticket_1, NodeType.object_id\u003e", "width": 4}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"borderWidth": 3, "borderWidthSelected": 6, "font": {"face": "verdana"}}, "edges": {"smooth": false}, "layout": {"hierarchical": {"enabled": true, "direction": "LR"}}, "interaction": {"hover": true}, "physics": {"enabled": false, "hierarchicalRepulsion": {"centralGravity": 0, "avoidOverlap": null}, "minVelocity": 0.75, "solver": "hierarchicalRepulsion"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

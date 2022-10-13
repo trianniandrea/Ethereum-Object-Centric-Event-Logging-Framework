@@ -1,0 +1,345 @@
+<log>
+	<global scope="event">
+		<string key="activity" value="__INVALID__" />
+	</global>
+	<global scope="object">
+		<string key="type" value="__INVALID__" />
+	</global>
+	<global scope="log">
+		<string key="ocel:version" value="1.0" />
+		<string key="ocel:ordering" value="timestamp" />
+		<list key="attribute-names">
+			<string key="attribute-name" value="to" />
+			<string key="attribute-name" value="value" />
+			<string key="attribute-name" value="from" />
+			<string key="attribute-name" value="notes" />
+			<string key="attribute-name" value="referreal" />
+			<string key="attribute-name" value="price" />
+			<string key="attribute-name" value="date" />
+			<string key="attribute-name" value="qty" />
+			<string key="attribute-name" value="colori" />
+			<string key="attribute-name" value="delivery_add" />
+			<string key="attribute-name" value="name" />
+		</list>
+		<list key="object-types">
+			<string key="object-type" value="Order" />
+			<string key="object-type" value="Customer" />
+			<string key="object-type" value="OrderLine" />
+			<string key="object-type" value="Product" />
+			<string key="object-type" value="Delivery" />
+		</list>
+	</global>
+	<events>
+		<event>
+			<string key="id" value="0" />
+			<string key="activity" value="call_create_order" />
+			<string key="timestamp" value="2022-09-06 21:07:57" />
+			<list key="omap">
+				<string key="object-id" value="Order_0" />
+				<string key="object-id" value="Order_1" />
+				<string key="object-id" value="Order_2" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+				<string key="referreal" value="android_app" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="1" />
+			<string key="activity" value="call_pick_item" />
+			<string key="timestamp" value="2022-09-06 21:07:57" />
+			<list key="omap">
+				<string key="object-id" value="OrderLine_0" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="2" />
+			<string key="activity" value="call_wrap_item" />
+			<string key="timestamp" value="2022-09-06 21:07:58" />
+			<list key="omap">
+				<string key="object-id" value="OrderLine_0" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+				<string key="notes" value="['Nota numero 1', 'Nota numero 2']" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="3" />
+			<string key="activity" value="call_delivery_items" />
+			<string key="timestamp" value="2022-09-06 21:07:58" />
+			<list key="omap">
+				<string key="object-id" value="Delivery_0" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="4" />
+			<string key="activity" value="call_create_order" />
+			<string key="timestamp" value="2022-09-06 21:07:59" />
+			<list key="omap">
+				<string key="object-id" value="Order_3" />
+				<string key="object-id" value="Order_4" />
+				<string key="object-id" value="Order_5" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+				<string key="referreal" value="android_app" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="5" />
+			<string key="activity" value="call_pick_item" />
+			<string key="timestamp" value="2022-09-06 21:07:59" />
+			<list key="omap">
+				<string key="object-id" value="OrderLine_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="6" />
+			<string key="activity" value="call_pick_item" />
+			<string key="timestamp" value="2022-09-06 21:07:59" />
+			<list key="omap">
+				<string key="object-id" value="OrderLine_2" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="7" />
+			<string key="activity" value="call_wrap_item" />
+			<string key="timestamp" value="2022-09-06 21:08:00" />
+			<list key="omap">
+				<string key="object-id" value="OrderLine_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+				<string key="notes" value="['Nota numero 1', 'Nota numero 2']" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="8" />
+			<string key="activity" value="call_delivery_items" />
+			<string key="timestamp" value="2022-09-06 21:08:00" />
+			<list key="omap">
+				<string key="object-id" value="Delivery_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+	</events>
+	<objects>
+		<object>
+			<string key="id" value="Order_0" />
+			<string key="type" value="Order" />
+			<list key="ovmap">
+				<string key="date" value="1662491277" />
+			</list>
+			<list key="rmap">
+				<string key="Order_0" value="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="Order_0" value="OrderLine_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+			<string key="type" value="Customer" />
+			<list key="ovmap">
+				<string key="name" value="Andrea" />
+			</list>
+			<list key="rmap">
+				<string key="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="Order_0" />
+				<string key="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="Order_1" />
+				<string key="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="Order_2" />
+				<string key="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="Delivery_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Order_1" />
+			<string key="type" value="Order" />
+			<list key="ovmap">
+				<string key="date" value="1662491277" />
+			</list>
+			<list key="rmap">
+				<string key="Order_1" value="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Order_2" />
+			<string key="type" value="Order" />
+			<list key="ovmap">
+				<string key="date" value="1662491277" />
+			</list>
+			<list key="rmap">
+				<string key="Order_2" value="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="OrderLine_0" />
+			<string key="type" value="OrderLine" />
+			<list key="ovmap">
+				<string key="qty" value="2" />
+			</list>
+			<list key="rmap">
+				<string key="OrderLine_0" value="Product_AutoID_5" />
+				<string key="OrderLine_0" value="Order_0" />
+				<string key="OrderLine_0" value="Delivery_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Product_AutoID_5" />
+			<string key="type" value="Product" />
+			<list key="ovmap">
+				<string key="name" value="Smatphone model K" />
+				<string key="price" value="800" />
+				<string key="colori" value="['viola', 'celeste']" />
+			</list>
+			<list key="rmap">
+				<string key="Product_AutoID_5" value="OrderLine_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Delivery_0" />
+			<string key="type" value="Delivery" />
+			<list key="ovmap">
+				<string key="date" value="1662491278" />
+				<string key="delivery_add" value="via aldo moro 20, Rome IT" />
+			</list>
+			<list key="rmap">
+				<string key="Delivery_0" value="Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="Delivery_0" value="OrderLine_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Order_3" />
+			<string key="type" value="Order" />
+			<list key="ovmap">
+				<string key="date" value="1662491279" />
+			</list>
+			<list key="rmap">
+				<string key="Order_3" value="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="Order_3" value="OrderLine_1" />
+				<string key="Order_3" value="OrderLine_2" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" />
+			<string key="type" value="Customer" />
+			<list key="ovmap">
+				<string key="name" value="Giorgio" />
+			</list>
+			<list key="rmap">
+				<string key="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" value="Order_3" />
+				<string key="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" value="Order_4" />
+				<string key="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" value="Order_5" />
+				<string key="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" value="Delivery_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Order_4" />
+			<string key="type" value="Order" />
+			<list key="ovmap">
+				<string key="date" value="1662491279" />
+			</list>
+			<list key="rmap">
+				<string key="Order_4" value="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Order_5" />
+			<string key="type" value="Order" />
+			<list key="ovmap">
+				<string key="date" value="1662491279" />
+			</list>
+			<list key="rmap">
+				<string key="Order_5" value="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="OrderLine_1" />
+			<string key="type" value="OrderLine" />
+			<list key="ovmap">
+				<string key="qty" value="3" />
+			</list>
+			<list key="rmap">
+				<string key="OrderLine_1" value="Product_AutoID_12" />
+				<string key="OrderLine_1" value="Order_3" />
+				<string key="OrderLine_1" value="Delivery_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Product_AutoID_12" />
+			<string key="type" value="Product" />
+			<list key="ovmap">
+				<string key="name" value="Smatphone model Y" />
+				<string key="price" value="700" />
+				<string key="colori" value="['giallo', 'verde']" />
+			</list>
+			<list key="rmap">
+				<string key="Product_AutoID_12" value="OrderLine_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="OrderLine_2" />
+			<string key="type" value="OrderLine" />
+			<list key="ovmap">
+				<string key="qty" value="1" />
+			</list>
+			<list key="rmap">
+				<string key="OrderLine_2" value="Order_3" />
+				<string key="OrderLine_2" value="Product_AutoID_15" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Product_AutoID_15" />
+			<string key="type" value="Product" />
+			<list key="ovmap">
+				<string key="name" value="Console gaming" />
+				<string key="price" value="500" />
+				<string key="colori" value="['bianco', 'Nero']" />
+			</list>
+			<list key="rmap">
+				<string key="Product_AutoID_15" value="OrderLine_2" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Delivery_1" />
+			<string key="type" value="Delivery" />
+			<list key="ovmap">
+				<string key="date" value="1662491280" />
+				<string key="delivery_add" value="via San Matteo 20, Rome IT" />
+			</list>
+			<list key="rmap">
+				<string key="Delivery_1" value="Customer_0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="Delivery_1" value="OrderLine_1" />
+			</list>
+		</object>
+	</objects>
+</log>

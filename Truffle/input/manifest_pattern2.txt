@@ -1,0 +1,46 @@
+% Manifest Example for pattern_2 project
+
+
+% ---- DEFINE THE MODEL (optional)---- %
+
+DEFINE_E2O_REL request_to_buy Order 1 1
+DEFINE_E2O_REL grant_loan Loan 1 1
+
+DEFINE_O2O_REL Car Order 0 1 0 N
+DEFINE_O2O_REL Order Loan 0 N 0 N
+
+DEFINE_AREA 1  Order Loan  call_request_to_buy call_grant_loan 
+DEFINE_CONSTRAINT Response  call_request_to_buy  call_grant_loan  1
+
+
+% ---- LOGGING CONTRACT GENERATION ---- %
+
+DEFINE_LOGIC ./Truffle/pattern_2/build/contracts/Contract.json inheritance
+%RUN_GENERATE ./Truffle/output/contracts/pattern2_generated inheritance
+
+
+% ---- GRAB FROM LOCAL ---- %
+
+DEFINE_CONNECTION  1 http://127.0.0.1:8545 0x0617Eb6212752Dfc068DFEFa55e263bBeecbfCFd ./Truffle/pattern_2/build/contracts/Wrapper.json
+%RUN_GRAB scan 2000 0
+%RUN_GRAB listen 5
+%RUN_EXPORT xml ./Truffle/output/log/pattern2_local true
+%RUN_EXPORT json ./Truffle/output/log/pattern2_local true
+
+
+% ---- PLOT EXAMPLE ---- %
+
+%RUN_IMPORT ./Truffle/output/log/pattern2_local.jsonocel 
+%RUN_PLOT  type 1 ./Truffle/output/plot/pattern2_local light
+%RUN_PLOT  id 1 ./Truffle/output/plot/pattern2_local light
+
+
+% ---- FILTER EXAMPLE ---- %
+
+%RUN_IMPORT ./Truffle/output/log/pattern2_local.jsonocel 
+%RUN_FILTER 
+%RUN_EXPORT json ./Truffle/output/log/pattern2_local_filtrato true
+%RUN_EXPORT xml ./Truffle/output/log/pattern2_local_filtrato true
+
+%RUN_PLOT  type 1 ./Truffle/output/plot/pattern2_local_filtrato light
+%RUN_PLOT  id 1 ./Truffle/output/plot/pattern2_local_filtrato light

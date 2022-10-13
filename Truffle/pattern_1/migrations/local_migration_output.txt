@@ -1,0 +1,92 @@
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      1337
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x9a7f8ab76fc1a2eacd43d2bfb259c9f6d9a430df7a3b60e11146fe64aaeec6db
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x5773f0D34A6e66d237227cba3A8761d6d89C60Ff
+   > block number:        2598
+   > block timestamp:     1662495254
+   > account:             0x048502C1eb9313fed0760232F3D0F064d9c245EE
+   > balance:             83.57310894
+   > gas used:            248854 (0x3cc16)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00497708 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00497708 ETH
+
+
+2_contract_migration.js
+=======================
+
+   Replacing 'Contract'
+   --------------------
+   > transaction hash:    0x8972e961ab6afa81417728c7ca4fcdaebbd8a851db7dcb6045318908108598b0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x2f79847C09Ed6e7A61EaA1c68a8c7f0Da0835B78
+   > block number:        2600
+   > block timestamp:     1662495254
+   > account:             0x048502C1eb9313fed0760232F3D0F064d9c245EE
+   > balance:             83.54984582
+   > gas used:            1120643 (0x111983)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02241286 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.02241286 ETH
+
+
+3_wrapper_migration.js
+======================
+
+   Replacing 'Wrapper'
+   -------------------
+   > transaction hash:    0x8528067906e2b089018cf7a0e9b8f57ddce47bb89bda4af76129c19d9b54827a
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x033ac55834bE940Fa679bBA29daB707f97165c8D
+   > block number:        2602
+   > block timestamp:     1662495255
+   > account:             0x1b52b250b841A7d4c6202Dc278F4d2Cf163453Dd
+   > balance:             99.18903994
+   > gas used:            989176 (0xf17f8)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01978352 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01978352 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.04717346 ETH
+
+

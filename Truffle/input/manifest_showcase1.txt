@@ -1,0 +1,72 @@
+% Manifest Example for showcase1 project
+
+
+% ---- DEFINE THE MODEL (optional)---- %
+
+DEFINE_E2O_REL call_create_order Order 1 1
+DEFINE_E2O_REL call_pick_item OrderLine 1 1
+DEFINE_E2O_REL call_wrap_item OrderLine 1 1
+DEFINE_E2O_REL call_delivery_items Delivery 1 1
+
+DEFINE_O2O_REL Order Customer 0 N 1 1
+DEFINE_O2O_REL Customer Delivery 1 1 0 N
+DEFINE_O2O_REL Order OrderLine 1 1 0 N
+DEFINE_O2O_REL OrderLine Product 0 N 1 1
+DEFINE_O2O_REL OrderLine Delivery 0 N 0 1
+
+DEFINE_AREA 1  call_create_order call_pick_item call_wrap_item call_delivery_items Order OrderLine Delivery
+DEFINE_CONSTRAINT Response  call_create_order call_pick_item 1 
+DEFINE_CONSTRAINT UnaryPrecedence  call_pick_item call_create_order  1 
+DEFINE_CONSTRAINT Response  call_pick_item call_wrap_item 1 
+DEFINE_CONSTRAINT Precedence call_wrap_item  call_pick_item  1 
+DEFINE_CONSTRAINT Response  call_wrap_item call_delivery_items 1 
+DEFINE_CONSTRAINT Precedence  call_delivery_items call_wrap_item  1 
+
+% ---- LOGGING CONTRACT GENERATION ---- %
+
+DEFINE_LOGIC ./Truffle/showcase_1/build/contracts/Business.json inheritance 
+%RUN_GENERATE ./Truffle/output/contracts/showcase1_generated inheritance
+
+
+% ---- GRAB FROM LOCAL ---- %
+
+%DEFINE_CONNECTION  1 http://127.0.0.1:8545 0x8A0bA3310e13dd26Eb6Ba9097C2135ACE4822e78 ./Truffle/showcase_1/build/contracts/Wrapper.json
+%DEFINE_CONNECTION  1 http://127.0.0.1:8545 0x6e69316C892b27B5b7C23BF74BE38738C03F750A ./Truffle/showcase_1/build/contracts/Logging.json
+DEFINE_CONNECTION  1 http://127.0.0.1:8545 0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7 ./Truffle/showcase_1/build/contracts/Logging.json
+%RUN_GRAB scan 2000 0
+%RUN_GRAB listen 5
+%RUN_EXPORT xml ./Truffle/output/log/showcase1_local_report true
+%RUN_EXPORT json ./Truffle/output/log/showcase1_local_report true
+
+
+
+% ---- PLOT EXAMPLE ---- %
+
+%RUN_IMPORT ./Truffle/output/log/showcase1_local_report.jsonocel 
+%RUN_PLOT  type 1 ./Truffle/output/plot/showcase1_local_report_l light
+%RUN_PLOT  id 1 ./Truffle/output/plot/showcase1_local_report_l light
+
+
+% ---- FILTER EXAMPLE ---- %
+
+%RUN_IMPORT ./Truffle/output/log/showcase1_local_report.jsonocel 
+%RUN_FILTER 
+%RUN_EXPORT json ./Truffle/output/log/showcase1_local_filtrato_report true
+%RUN_EXPORT xml ./Truffle/output/log/showcase1_local_filtrato_report true
+
+%RUN_PLOT  type 1 ./Truffle/output/plot/showcase1_local_filtrato_report_l light
+%RUN_PLOT  id 1 ./Truffle/output/plot/showcase1_local_filtrato_report_l light
+
+
+% --- TEST OCEL STD --- %
+
+%RUN_IMPORT ./Truffle/output/log/showcase1_local_report.jsonocel 
+%RUN_PLOT  type 1 ./Truffle/output/plot/showcase1_local_report_l light
+%RUN_PLOT  id 1 ./Truffle/output/plot/showcase1_local_report_l light
+
+%RUN_EXPORT json ./Truffle/output/log/showcase1_local_NOREL false
+%RUN_EXPORT xml ./Truffle/output/log/showcase1_local_NOREL false
+
+%RUN_IMPORT ./Truffle/output/log/showcase1_local_NOREL.jsonocel 
+%RUN_PLOT  type 1 ./Truffle/output/plot/showcase1_local_NOREL light
+%RUN_PLOT  id 1 ./Truffle/output/plot/showcase1_local_NOREL light

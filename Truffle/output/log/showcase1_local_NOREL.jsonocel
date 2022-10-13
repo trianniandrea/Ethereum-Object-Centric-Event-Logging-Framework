@@ -1,0 +1,174 @@
+{
+    "ocel:global-log": {
+        "ocel:version": "1.0",
+        "ocel:ordering": "timestamp",
+        "ocel:attribute-names": [
+            "referreal",
+            "value",
+            "date",
+            "delivery_add",
+            "qty",
+            "from",
+            "notes",
+            "to"
+        ],
+        "ocel:object-types": [
+            "Order",
+            "OrderLine",
+            "Delivery"
+        ]
+    },
+    "ocel:global-event": {
+        "ocel:activity": "__INVALID__"
+    },
+    "ocel:global-object": {
+        "ocel:type": "__INVALID__"
+    },
+    "ocel:events": {
+        "0": {
+            "ocel:activity": "call_create_order",
+            "ocel:timestamp": "2022-09-29 11:34:10",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0,
+                "referreal": "android_app"
+            },
+            "ocel:omap": [
+                "Order_0"
+            ]
+        },
+        "1": {
+            "ocel:activity": "call_pick_item",
+            "ocel:timestamp": "2022-09-29 11:34:11",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0
+            },
+            "ocel:omap": [
+                "OrderLine_0"
+            ]
+        },
+        "2": {
+            "ocel:activity": "call_wrap_item",
+            "ocel:timestamp": "2022-09-29 11:34:11",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0,
+                "notes": [
+                    "Fragile",
+                    "Box too large"
+                ]
+            },
+            "ocel:omap": [
+                "OrderLine_0"
+            ]
+        },
+        "3": {
+            "ocel:activity": "call_delivery_items",
+            "ocel:timestamp": "2022-09-29 11:34:13",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Delivery_0"
+            ]
+        },
+        "4": {
+            "ocel:activity": "call_create_order",
+            "ocel:timestamp": "2022-09-29 11:34:13",
+            "ocel:vmap": {
+                "from": "0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0,
+                "referreal": "desktop_website_promo5"
+            },
+            "ocel:omap": [
+                "Order_1"
+            ]
+        },
+        "5": {
+            "ocel:activity": "call_pick_item",
+            "ocel:timestamp": "2022-09-29 11:34:13",
+            "ocel:vmap": {
+                "from": "0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0
+            },
+            "ocel:omap": [
+                "OrderLine_1"
+            ]
+        },
+        "6": {
+            "ocel:activity": "call_wrap_item",
+            "ocel:timestamp": "2022-09-29 11:34:14",
+            "ocel:vmap": {
+                "from": "0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0,
+                "notes": [
+                    "Fragile"
+                ]
+            },
+            "ocel:omap": [
+                "OrderLine_1"
+            ]
+        },
+        "7": {
+            "ocel:activity": "call_delivery_items",
+            "ocel:timestamp": "2022-09-29 11:34:14",
+            "ocel:vmap": {
+                "from": "0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Delivery_1"
+            ]
+        }
+    },
+    "ocel:objects": {
+        "Order_0": {
+            "ocel:type": "Order",
+            "ocel:ovmap": {
+                "date": 1664444050
+            }
+        },
+        "OrderLine_0": {
+            "ocel:type": "OrderLine",
+            "ocel:ovmap": {
+                "qty": 2
+            }
+        },
+        "Delivery_0": {
+            "ocel:type": "Delivery",
+            "ocel:ovmap": {
+                "date": 1664444053,
+                "delivery_add": "Via Aldo Moro 1, Rome IT"
+            }
+        },
+        "Order_1": {
+            "ocel:type": "Order",
+            "ocel:ovmap": {
+                "date": 1664444053
+            }
+        },
+        "OrderLine_1": {
+            "ocel:type": "OrderLine",
+            "ocel:ovmap": {
+                "qty": 1
+            }
+        },
+        "Delivery_1": {
+            "ocel:type": "Delivery",
+            "ocel:ovmap": {
+                "date": 1664444054,
+                "delivery_add": "Via Ciceraucchio 2, Milan IT"
+            }
+        }
+    }
+}

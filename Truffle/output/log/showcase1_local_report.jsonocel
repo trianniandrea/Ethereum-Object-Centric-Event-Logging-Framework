@@ -1,0 +1,252 @@
+{
+    "ocel:global-log": {
+        "ocel:version": "custom",
+        "ocel:ordering": "timestamp",
+        "ocel:attribute-names": [
+            "referreal",
+            "colori",
+            "date",
+            "value",
+            "delivery_add",
+            "qty",
+            "from",
+            "name",
+            "notes",
+            "to",
+            "price"
+        ],
+        "ocel:object-types": [
+            "Order",
+            "Customer",
+            "OrderLine",
+            "Product",
+            "Delivery"
+        ]
+    },
+    "ocel:global-event": {
+        "ocel:activity": "__INVALID__"
+    },
+    "ocel:global-object": {
+        "ocel:type": "__INVALID__"
+    },
+    "ocel:events": {
+        "0": {
+            "ocel:activity": "call_create_order",
+            "ocel:timestamp": "2022-09-29 11:34:10",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0,
+                "referreal": "android_app"
+            },
+            "ocel:omap": [
+                "Order_0"
+            ]
+        },
+        "1": {
+            "ocel:activity": "call_pick_item",
+            "ocel:timestamp": "2022-09-29 11:34:11",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0
+            },
+            "ocel:omap": [
+                "OrderLine_0"
+            ]
+        },
+        "2": {
+            "ocel:activity": "call_wrap_item",
+            "ocel:timestamp": "2022-09-29 11:34:11",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0,
+                "notes": [
+                    "Fragile",
+                    "Box too large"
+                ]
+            },
+            "ocel:omap": [
+                "OrderLine_0"
+            ]
+        },
+        "3": {
+            "ocel:activity": "call_delivery_items",
+            "ocel:timestamp": "2022-09-29 11:34:13",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Delivery_0"
+            ]
+        },
+        "4": {
+            "ocel:activity": "call_create_order",
+            "ocel:timestamp": "2022-09-29 11:34:13",
+            "ocel:vmap": {
+                "from": "0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0,
+                "referreal": "desktop_website_promo5"
+            },
+            "ocel:omap": [
+                "Order_1"
+            ]
+        },
+        "5": {
+            "ocel:activity": "call_pick_item",
+            "ocel:timestamp": "2022-09-29 11:34:13",
+            "ocel:vmap": {
+                "from": "0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0
+            },
+            "ocel:omap": [
+                "OrderLine_1"
+            ]
+        },
+        "6": {
+            "ocel:activity": "call_wrap_item",
+            "ocel:timestamp": "2022-09-29 11:34:14",
+            "ocel:vmap": {
+                "from": "0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0,
+                "notes": [
+                    "Fragile"
+                ]
+            },
+            "ocel:omap": [
+                "OrderLine_1"
+            ]
+        },
+        "7": {
+            "ocel:activity": "call_delivery_items",
+            "ocel:timestamp": "2022-09-29 11:34:14",
+            "ocel:vmap": {
+                "from": "0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "to": "0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Delivery_1"
+            ]
+        }
+    },
+    "ocel:objects": {
+        "Order_0": {
+            "ocel:type": "Order",
+            "ocel:ovmap": {
+                "date": 1664444050
+            },
+            "custom:rmap": [
+                "Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "OrderLine_0"
+            ]
+        },
+        "Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71": {
+            "ocel:type": "Customer",
+            "ocel:ovmap": {
+                "name": "Andrea Rossi"
+            },
+            "custom:rmap": [
+                "Order_0",
+                "Delivery_0"
+            ]
+        },
+        "OrderLine_0": {
+            "ocel:type": "OrderLine",
+            "ocel:ovmap": {
+                "qty": 2
+            },
+            "custom:rmap": [
+                "Product_AutoID_3",
+                "Order_0",
+                "Delivery_0"
+            ]
+        },
+        "Product_AutoID_3": {
+            "ocel:type": "Product",
+            "ocel:ovmap": {
+                "name": "Smartphone model K",
+                "price": 800,
+                "colori": [
+                    "green",
+                    "black"
+                ]
+            },
+            "custom:rmap": [
+                "OrderLine_0"
+            ]
+        },
+        "Delivery_0": {
+            "ocel:type": "Delivery",
+            "ocel:ovmap": {
+                "date": 1664444053,
+                "delivery_add": "Via Aldo Moro 1, Rome IT"
+            },
+            "custom:rmap": [
+                "Customer_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "OrderLine_0"
+            ]
+        },
+        "Order_1": {
+            "ocel:type": "Order",
+            "ocel:ovmap": {
+                "date": 1664444053
+            },
+            "custom:rmap": [
+                "Customer_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "OrderLine_1"
+            ]
+        },
+        "Customer_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94": {
+            "ocel:type": "Customer",
+            "ocel:ovmap": {
+                "name": "Mario Bianchi"
+            },
+            "custom:rmap": [
+                "Order_1",
+                "Delivery_1"
+            ]
+        },
+        "OrderLine_1": {
+            "ocel:type": "OrderLine",
+            "ocel:ovmap": {
+                "qty": 1
+            },
+            "custom:rmap": [
+                "Product_AutoID_8",
+                "Order_1",
+                "Delivery_1"
+            ]
+        },
+        "Product_AutoID_8": {
+            "ocel:type": "Product",
+            "ocel:ovmap": {
+                "name": "Console model Y",
+                "price": 500,
+                "colori": [
+                    "black"
+                ]
+            },
+            "custom:rmap": [
+                "OrderLine_1"
+            ]
+        },
+        "Delivery_1": {
+            "ocel:type": "Delivery",
+            "ocel:ovmap": {
+                "date": 1664444054,
+                "delivery_add": "Via Ciceraucchio 2, Milan IT"
+            },
+            "custom:rmap": [
+                "Customer_0xE055fA66b5a8Bd78e8eBC7b7DFe7b94AEbb62c94",
+                "OrderLine_1"
+            ]
+        }
+    }
+}

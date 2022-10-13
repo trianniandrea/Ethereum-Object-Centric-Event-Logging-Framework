@@ -1,0 +1,146 @@
+<log>
+	<global scope="event">
+		<string key="activity" value="__INVALID__" />
+	</global>
+	<global scope="object">
+		<string key="type" value="__INVALID__" />
+	</global>
+	<global scope="log">
+		<string key="ocel:version" value="custom" />
+		<string key="ocel:ordering" value="timestamp" />
+		<list key="attribute-names">
+			<string key="attribute-name" value="from" />
+			<string key="attribute-name" value="to" />
+			<string key="attribute-name" value="value" />
+			<string key="attribute-name" value="marca" />
+			<string key="attribute-name" value="amount" />
+			<string key="attribute-name" value="modello" />
+			<string key="attribute-name" value="price" />
+		</list>
+		<list key="object-types">
+			<string key="object-type" value="Order" />
+			<string key="object-type" value="Car" />
+			<string key="object-type" value="Loan" />
+		</list>
+	</global>
+	<events>
+		<event>
+			<string key="id" value="0" />
+			<string key="activity" value="call_request_to_buy" />
+			<string key="timestamp" value="2022-09-06 22:16:43" />
+			<list key="omap">
+				<string key="object-id" value="Order_0" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x033ac55834bE940Fa679bBA29daB707f97165c8D" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="1" />
+			<string key="activity" value="call_grant_loan" />
+			<string key="timestamp" value="2022-09-06 22:16:44" />
+			<list key="omap">
+				<string key="object-id" value="Loan_0" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x033ac55834bE940Fa679bBA29daB707f97165c8D" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="2" />
+			<string key="activity" value="call_request_to_buy" />
+			<string key="timestamp" value="2022-09-06 22:16:44" />
+			<list key="omap">
+				<string key="object-id" value="Order_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x033ac55834bE940Fa679bBA29daB707f97165c8D" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="3" />
+			<string key="activity" value="call_grant_loan" />
+			<string key="timestamp" value="2022-09-06 22:16:44" />
+			<list key="omap">
+				<string key="object-id" value="Loan_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x033ac55834bE940Fa679bBA29daB707f97165c8D" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+	</events>
+	<objects>
+		<object>
+			<string key="id" value="Order_0" />
+			<string key="type" value="Order" />
+			<list key="ovmap">
+				<string key="price" value="10000" />
+			</list>
+			<list key="rmap">
+				<string key="Order_0" value="Car_PP111KK" />
+				<string key="Order_0" value="Loan_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Car_PP111KK" />
+			<string key="type" value="Car" />
+			<list key="ovmap">
+				<string key="marca" value="Fiat" />
+				<string key="modello" value="Punto" />
+			</list>
+			<list key="rmap">
+				<string key="Car_PP111KK" value="Order_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Loan_0" />
+			<string key="type" value="Loan" />
+			<list key="ovmap">
+				<string key="amount" value="5000" />
+			</list>
+			<list key="rmap">
+				<string key="Loan_0" value="Order_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Order_1" />
+			<string key="type" value="Order" />
+			<list key="ovmap">
+				<string key="price" value="8000" />
+			</list>
+			<list key="rmap">
+				<string key="Order_1" value="Car_RR222NN" />
+				<string key="Order_1" value="Loan_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Car_RR222NN" />
+			<string key="type" value="Car" />
+			<list key="ovmap">
+				<string key="marca" value="Fiat" />
+				<string key="modello" value="Panda" />
+			</list>
+			<list key="rmap">
+				<string key="Car_RR222NN" value="Order_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Loan_1" />
+			<string key="type" value="Loan" />
+			<list key="ovmap">
+				<string key="amount" value="8000" />
+			</list>
+			<list key="rmap">
+				<string key="Loan_1" value="Order_1" />
+			</list>
+		</object>
+	</objects>
+</log>

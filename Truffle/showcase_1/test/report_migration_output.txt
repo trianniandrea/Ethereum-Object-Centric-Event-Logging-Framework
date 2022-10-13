@@ -1,0 +1,155 @@
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Application.sol
+> Compilation warnings encountered:
+
+    Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> project:/contracts/Application.sol
+
+,Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.8.10;"
+--> project:/contracts/Application.sol
+
+,Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> project:/contracts/Application.sol:63:45:
+   |
+63 |     function Create_Order(address customer, string memory referreal) public
+   |                                             ^^^^^^^^^^^^^^^^^^^^^^^
+
+,Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+  --> project:/contracts/Application.sol:86:37:
+   |
+86 |     function wrap_item (uint ol_id, string[] memory notes) public virtual returns (OrderLine memory ol){
+   |                                     ^^^^^^^^^^^^^^^^^^^^^
+
+
+> Artifacts written to /home/andrea/Scrivania/Master-Thesis/Truffle/showcase_1/build/contracts
+> Compiled successfully using:
+   - solc: 0.8.10+commit.fc410830.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      1337
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x09ed7db2cdfc9637de93c41570b137440083524b04b58d1cb2e9fa5c5d52a4bf
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xd373AFf3F35e6772946D640BeCda1b7962DCA10F
+   > block number:        3351
+   > block timestamp:     1664443990
+   > account:             0x048502C1eb9313fed0760232F3D0F064d9c245EE
+   > balance:             79.94260156
+   > gas used:            248854 (0x3cc16)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00497708 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00497708 ETH
+
+
+2_application_migration.js
+==========================
+
+   Replacing 'Application'
+   -----------------------
+   > transaction hash:    0x53b40c8cb9c024419aa981db2ff8db0ffcfa57f7f8b39eebf95ca2784669f445
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xe0930836211B9C8bF3DA016134C7578eF0Cb19c0
+   > block number:        3353
+   > block timestamp:     1664443991
+   > account:             0x048502C1eb9313fed0760232F3D0F064d9c245EE
+   > balance:             79.89903288
+   > gas used:            2135921 (0x209771)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.04271842 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.04271842 ETH
+
+
+3_monolith_migration.js
+=======================
+
+   Replacing 'Monolith'
+   --------------------
+   > transaction hash:    0xe2936ac626565a3ade9402fb5e606f1963331303b5e2142916c0b6130fb5428b
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xc098FB66FC04894113C16De6F2fA97147e3b7aB2
+   > block number:        3355
+   > block timestamp:     1664443991
+   > account:             0x048502C1eb9313fed0760232F3D0F064d9c245EE
+   > balance:             79.85168562
+   > gas used:            2339850 (0x23b40a)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.046797 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:            0.046797 ETH
+
+
+4_decoupled_migration.js
+========================
+
+   Replacing 'Business'
+   --------------------
+   > transaction hash:    0xbf29129be2e8859cd96f28a5046e0f7e06f3808dd3fa78389ffbb11ec6875881
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xB56615BdEDA84C96E2E1068A230dF73A33920aBb
+   > block number:        3357
+   > block timestamp:     1664443992
+   > account:             0x048502C1eb9313fed0760232F3D0F064d9c245EE
+   > balance:             79.803154
+   > gas used:            2399068 (0x249b5c)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.04798136 ETH
+
+
+   Replacing 'Logging'
+   -------------------
+   > transaction hash:    0x2ceb311790c4bb9011b61f0040801ca8b34de9c7d9fcc94a277d3efad4e40a77
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xE10ee1DFD43b5365f31FC9E379DfF98EA0a1CBB7
+   > block number:        3358
+   > block timestamp:     1664443993
+   > account:             0x048502C1eb9313fed0760232F3D0F064d9c245EE
+   > balance:             79.74995066
+   > gas used:            2660167 (0x289747)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.05320334 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.1011847 ETH
+
+
+Summary
+=======
+> Total deployments:   5
+> Final cost:          0.1956772 ETH
+
+

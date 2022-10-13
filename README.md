@@ -25,7 +25,7 @@ Once python is installed in your machine, the framework needs some external pack
 ```
 pip install -r ./Framework/requirements.txt
 ```
-Moreover, each Truffle project may require to install some javascript dependencies. <br>*For example if you want to deploy contracts using an Infura node.*<br>
+Moreover, each Truffle project may require to install some javascript dependencies. <br>*For example if you want to deploy contracts using an Infura node. Pay attention, in this case you need also to create a .env file.*<br>
 As consequence of that, please go in each truffle project folder and install them, as shown.
 ```
 cd ./Truffle/showcase1
@@ -61,7 +61,7 @@ python ./Framework/App.py ./Truffle/input/manifest_1.txt
 
 Manifest supports two type of instructions, namely: *definitions* and *commands*. The former are needed to provide a specification of the meta-model (like event-to-object relations, and control-flow constraints), the latter simply tell to the framework what practically it has to do.
 Instructions can be inserted in any order, anyway, *definitions* are all instantaneously globally read, and *commands* are executed in the order they are found.
-More detail can be found in my written thesis report[^1].
+More details can be found in my written thesis report[^1].
 
 Manifest is not compiled and therefore it can throw exceptions at runtime.
 Each command is case sensitive and needs to be put in a single line. Blank rows and full-line comments are supported trought the *'%'* keyword.

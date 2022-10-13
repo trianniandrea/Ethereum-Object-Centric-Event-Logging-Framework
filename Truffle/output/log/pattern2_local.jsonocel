@@ -1,0 +1,136 @@
+{
+    "ocel:global-log": {
+        "ocel:version": "1.0",
+        "ocel:ordering": "timestamp",
+        "ocel:attribute-names": [
+            "price",
+            "from",
+            "amount",
+            "marca",
+            "value",
+            "modello",
+            "to"
+        ],
+        "ocel:object-types": [
+            "Order",
+            "Car",
+            "Loan"
+        ]
+    },
+    "ocel:global-event": {
+        "ocel:activity": "__INVALID__"
+    },
+    "ocel:global-object": {
+        "ocel:type": "__INVALID__"
+    },
+    "ocel:events": {
+        "0": {
+            "ocel:activity": "call_request_to_buy",
+            "ocel:timestamp": "2022-09-06 13:21:22",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x0617Eb6212752Dfc068DFEFa55e263bBeecbfCFd",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Order_0"
+            ]
+        },
+        "1": {
+            "ocel:activity": "call_grant_loan",
+            "ocel:timestamp": "2022-09-06 13:21:23",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x0617Eb6212752Dfc068DFEFa55e263bBeecbfCFd",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Loan_0"
+            ]
+        },
+        "2": {
+            "ocel:activity": "call_request_to_buy",
+            "ocel:timestamp": "2022-09-06 13:21:23",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x0617Eb6212752Dfc068DFEFa55e263bBeecbfCFd",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Order_1"
+            ]
+        },
+        "3": {
+            "ocel:activity": "call_grant_loan",
+            "ocel:timestamp": "2022-09-06 13:21:23",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x0617Eb6212752Dfc068DFEFa55e263bBeecbfCFd",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Loan_1"
+            ]
+        }
+    },
+    "ocel:objects": {
+        "Order_0": {
+            "ocel:type": "Order",
+            "ocel:ovmap": {
+                "price": 10000
+            },
+            "ocel:rmap": [
+                "Car_PP111KK",
+                "Loan_0"
+            ]
+        },
+        "Car_PP111KK": {
+            "ocel:type": "Car",
+            "ocel:ovmap": {
+                "marca": "Fiat",
+                "modello": "Punto"
+            },
+            "ocel:rmap": [
+                "Order_0"
+            ]
+        },
+        "Loan_0": {
+            "ocel:type": "Loan",
+            "ocel:ovmap": {
+                "amount": 5000
+            },
+            "ocel:rmap": [
+                "Order_0"
+            ]
+        },
+        "Order_1": {
+            "ocel:type": "Order",
+            "ocel:ovmap": {
+                "price": 8000
+            },
+            "ocel:rmap": [
+                "Car_RR222NN",
+                "Loan_1"
+            ]
+        },
+        "Car_RR222NN": {
+            "ocel:type": "Car",
+            "ocel:ovmap": {
+                "marca": "Fiat",
+                "modello": "Panda"
+            },
+            "ocel:rmap": [
+                "Order_1"
+            ]
+        },
+        "Loan_1": {
+            "ocel:type": "Loan",
+            "ocel:ovmap": {
+                "amount": 8000
+            },
+            "ocel:rmap": [
+                "Order_1"
+            ]
+        }
+    }
+}

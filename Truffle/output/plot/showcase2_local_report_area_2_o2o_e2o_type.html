@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #222222;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "#808080", "font": {"color": "white"}, "id": "\u003cId: Ticket, NodeType.object_type\u003e", "label": "Ticket", "shape": "dot", "title": "\u003cId: Ticket, NodeType.object_type\u003e"}, {"color": "#808080", "font": {"color": "white"}, "id": "\u003cId: call_buy_trip, NodeType.event_type\u003e", "label": "call_buy_trip", "shape": "dot", "title": "\u003cId: call_buy_trip, NodeType.event_type\u003e"}, {"color": "#808080", "font": {"color": "white"}, "id": "\u003cId: Traveller, NodeType.object_type\u003e", "label": "Traveller", "shape": "dot", "title": "\u003cId: Traveller, NodeType.object_type\u003e"}, {"color": "#808080", "font": {"color": "white"}, "id": "\u003cId: call_deliver_luggage, NodeType.event_type\u003e", "label": "call_deliver_luggage", "shape": "dot", "title": "\u003cId: call_deliver_luggage, NodeType.event_type\u003e"}, {"color": "#808080", "font": {"color": "white"}, "id": "\u003cId: call_check_in, NodeType.event_type\u003e", "label": "call_check_in", "shape": "dot", "title": "\u003cId: call_check_in, NodeType.event_type\u003e"}, {"color": "#808080", "font": {"color": "white"}, "id": "\u003cId: boarding_card, NodeType.object_type\u003e", "label": "boarding_card", "shape": "dot", "title": "\u003cId: boarding_card, NodeType.object_type\u003e"}, {"color": "#1982C4", "font": {"color": "white"}, "id": "\u003cId: call_cancel_flight, NodeType.event_type\u003e", "label": "call_cancel_flight", "shape": "dot", "title": "\u003cId: call_cancel_flight, NodeType.event_type\u003e"}, {"color": "#FFCA3A", "font": {"color": "white"}, "id": "\u003cId: flight, NodeType.object_type\u003e", "label": "flight", "shape": "dot", "title": "\u003cId: flight, NodeType.object_type\u003e"}, {"color": "#808080", "font": {"color": "white"}, "id": "\u003cId: Luggage, NodeType.object_type\u003e", "label": "Luggage", "shape": "dot", "title": "\u003cId: Luggage, NodeType.object_type\u003e"}, {"color": "#1982C4", "font": {"color": "white"}, "id": "\u003cId: call_start_flight, NodeType.event_type\u003e", "label": "call_start_flight", "shape": "dot", "title": "\u003cId: call_start_flight, NodeType.event_type\u003e"}, {"color": "#808080", "font": {"color": "white"}, "id": "\u003cId: call_security_control, NodeType.event_type\u003e", "label": "call_security_control", "shape": "dot", "title": "\u003cId: call_security_control, NodeType.event_type\u003e"}]);
+        edges = new vis.DataSet([{"color": "#808080", "dashes": true, "from": "\u003cId: Ticket, NodeType.object_type\u003e", "label": "", "to": "\u003cId: Traveller, NodeType.object_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: Ticket, NodeType.object_type\u003e", "label": "", "to": "\u003cId: boarding_card, NodeType.object_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: Ticket, NodeType.object_type\u003e", "label": "", "to": "\u003cId: call_buy_trip, NodeType.event_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: Traveller, NodeType.object_type\u003e", "label": "", "to": "\u003cId: boarding_card, NodeType.object_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: Traveller, NodeType.object_type\u003e", "label": "", "to": "\u003cId: Luggage, NodeType.object_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: call_deliver_luggage, NodeType.event_type\u003e", "label": "", "to": "\u003cId: boarding_card, NodeType.object_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: call_check_in, NodeType.event_type\u003e", "label": "", "to": "\u003cId: boarding_card, NodeType.object_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: boarding_card, NodeType.object_type\u003e", "label": "", "to": "\u003cId: flight, NodeType.object_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: boarding_card, NodeType.object_type\u003e", "label": "", "to": "\u003cId: Luggage, NodeType.object_type\u003e", "width": 1}, {"color": "#808080", "dashes": true, "from": "\u003cId: boarding_card, NodeType.object_type\u003e", "label": "", "to": "\u003cId: call_security_control, NodeType.event_type\u003e", "width": 1}, {"color": "#FFFFFF", "dashes": false, "from": "\u003cId: call_cancel_flight, NodeType.event_type\u003e", "label": "", "to": "\u003cId: flight, NodeType.object_type\u003e", "width": 4}, {"color": "#FFFFFF", "dashes": false, "from": "\u003cId: flight, NodeType.object_type\u003e", "label": "", "to": "\u003cId: call_start_flight, NodeType.event_type\u003e", "width": 4}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"borderWidth": 3, "borderWidthSelected": 6, "font": {"face": "verdana"}}, "edges": {"smooth": false}, "layout": {"hierarchical": {"enabled": true, "direction": "LR"}}, "interaction": {"hover": true}, "physics": {"enabled": false, "hierarchicalRepulsion": {"centralGravity": 0, "avoidOverlap": null}, "minVelocity": 0.75, "solver": "hierarchicalRepulsion"}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

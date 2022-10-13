@@ -1,0 +1,404 @@
+{
+    "ocel:global-log": {
+        "ocel:version": "1.0",
+        "ocel:ordering": "timestamp",
+        "ocel:attribute-names": [
+            "gate",
+            "time_arrival",
+            "time_departure",
+            "weight",
+            "luggage_delivered",
+            "to",
+            "state",
+            "company",
+            "seat",
+            "name",
+            "class",
+            "color",
+            "nationality",
+            "boarding_time",
+            "security_check",
+            "from",
+            "value",
+            "surname"
+        ],
+        "ocel:object-types": [
+            "Ticket",
+            "Traveller",
+            "boarding_card",
+            "Luggage",
+            "flight"
+        ]
+    },
+    "ocel:global-event": {
+        "ocel:activity": "__INVALID__"
+    },
+    "ocel:global-object": {
+        "ocel:type": "__INVALID__"
+    },
+    "ocel:events": {
+        "0": {
+            "ocel:activity": "call_buy_trip",
+            "ocel:timestamp": "2022-09-06 18:09:15",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Ticket_0",
+                "Ticket_1"
+            ]
+        },
+        "1": {
+            "ocel:activity": "call_check_in",
+            "ocel:timestamp": "2022-09-06 18:09:15",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_0"
+            ]
+        },
+        "2": {
+            "ocel:activity": "call_check_in",
+            "ocel:timestamp": "2022-09-06 18:09:15",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_1"
+            ]
+        },
+        "3": {
+            "ocel:activity": "call_deliver_luggage",
+            "ocel:timestamp": "2022-09-06 18:09:16",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_0"
+            ]
+        },
+        "4": {
+            "ocel:activity": "call_deliver_luggage",
+            "ocel:timestamp": "2022-09-06 18:09:16",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_1"
+            ]
+        },
+        "5": {
+            "ocel:activity": "call_security_control",
+            "ocel:timestamp": "2022-09-06 18:09:16",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_0"
+            ]
+        },
+        "6": {
+            "ocel:activity": "call_security_control",
+            "ocel:timestamp": "2022-09-06 18:09:16",
+            "ocel:vmap": {
+                "from": "0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_1"
+            ]
+        },
+        "9": {
+            "ocel:activity": "call_buy_trip",
+            "ocel:timestamp": "2022-09-06 18:09:18",
+            "ocel:vmap": {
+                "from": "0x3294029B19C444907b813a5b44246F284e6F9745",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "Ticket_2",
+                "Ticket_3"
+            ]
+        },
+        "10": {
+            "ocel:activity": "call_check_in",
+            "ocel:timestamp": "2022-09-06 18:09:18",
+            "ocel:vmap": {
+                "from": "0x3294029B19C444907b813a5b44246F284e6F9745",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_2"
+            ]
+        },
+        "11": {
+            "ocel:activity": "call_check_in",
+            "ocel:timestamp": "2022-09-06 18:09:19",
+            "ocel:vmap": {
+                "from": "0x3294029B19C444907b813a5b44246F284e6F9745",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_3"
+            ]
+        },
+        "12": {
+            "ocel:activity": "call_deliver_luggage",
+            "ocel:timestamp": "2022-09-06 18:09:19",
+            "ocel:vmap": {
+                "from": "0x3294029B19C444907b813a5b44246F284e6F9745",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_2"
+            ]
+        },
+        "13": {
+            "ocel:activity": "call_deliver_luggage",
+            "ocel:timestamp": "2022-09-06 18:09:19",
+            "ocel:vmap": {
+                "from": "0x3294029B19C444907b813a5b44246F284e6F9745",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_3"
+            ]
+        },
+        "14": {
+            "ocel:activity": "call_security_control",
+            "ocel:timestamp": "2022-09-06 18:09:19",
+            "ocel:vmap": {
+                "from": "0x3294029B19C444907b813a5b44246F284e6F9745",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_2"
+            ]
+        },
+        "15": {
+            "ocel:activity": "call_security_control",
+            "ocel:timestamp": "2022-09-06 18:09:19",
+            "ocel:vmap": {
+                "from": "0x3294029B19C444907b813a5b44246F284e6F9745",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "boarding_card_3"
+            ]
+        },
+        "16": {
+            "ocel:activity": "call_start_flight",
+            "ocel:timestamp": "2022-09-06 18:09:20",
+            "ocel:vmap": {
+                "from": "0x3294029B19C444907b813a5b44246F284e6F9745",
+                "to": "0x5712Ec537622dCd15E32BfaC032568F0860bE7E4",
+                "value": 0
+            },
+            "ocel:omap": [
+                "flight_1"
+            ]
+        }
+    },
+    "ocel:objects": {
+        "Ticket_0": {
+            "ocel:type": "Ticket",
+            "ocel:ovmap": {
+                "class": "A",
+                "seat": "19c"
+            },
+            "ocel:rmap": [
+                "Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "boarding_card_0",
+                "boarding_card_1"
+            ]
+        },
+        "Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71": {
+            "ocel:type": "Traveller",
+            "ocel:ovmap": {
+                "name": "Andrea",
+                "surname": "Trianni",
+                "nationality": "Italy"
+            },
+            "ocel:rmap": [
+                "Ticket_0",
+                "Ticket_1",
+                "boarding_card_0",
+                "boarding_card_1",
+                "Luggage_0"
+            ]
+        },
+        "Ticket_1": {
+            "ocel:type": "Ticket",
+            "ocel:ovmap": {
+                "class": "B",
+                "seat": "19b"
+            },
+            "ocel:rmap": [
+                "Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "boarding_card_0",
+                "boarding_card_1"
+            ]
+        },
+        "boarding_card_0": {
+            "ocel:type": "boarding_card",
+            "ocel:ovmap": {
+                "gate": 1,
+                "boarding_time": 1662478755,
+                "luggage_delivered": true,
+                "security_check": true
+            },
+            "ocel:rmap": [
+                "Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "Ticket_0",
+                "Ticket_1",
+                "Luggage_0"
+            ]
+        },
+        "boarding_card_1": {
+            "ocel:type": "boarding_card",
+            "ocel:ovmap": {
+                "gate": 1,
+                "boarding_time": 1662478755,
+                "luggage_delivered": true,
+                "security_check": true
+            },
+            "ocel:rmap": [
+                "Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "Ticket_0",
+                "Ticket_1",
+                "Luggage_0"
+            ]
+        },
+        "Luggage_0": {
+            "ocel:type": "Luggage",
+            "ocel:ovmap": {
+                "color": "blue",
+                "weight": 20
+            },
+            "ocel:rmap": [
+                "boarding_card_0",
+                "Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71",
+                "boarding_card_1"
+            ]
+        },
+        "Ticket_2": {
+            "ocel:type": "Ticket",
+            "ocel:ovmap": {
+                "class": "B",
+                "seat": "1c"
+            },
+            "ocel:rmap": [
+                "Traveller_0x3294029B19C444907b813a5b44246F284e6F9745",
+                "boarding_card_2",
+                "boarding_card_3"
+            ]
+        },
+        "Traveller_0x3294029B19C444907b813a5b44246F284e6F9745": {
+            "ocel:type": "Traveller",
+            "ocel:ovmap": {
+                "name": "Giorgio",
+                "surname": "Rossi",
+                "nationality": "Italy"
+            },
+            "ocel:rmap": [
+                "Ticket_2",
+                "Ticket_3",
+                "boarding_card_2",
+                "boarding_card_3",
+                "Luggage_1"
+            ]
+        },
+        "Ticket_3": {
+            "ocel:type": "Ticket",
+            "ocel:ovmap": {
+                "class": "B",
+                "seat": "1b"
+            },
+            "ocel:rmap": [
+                "Traveller_0x3294029B19C444907b813a5b44246F284e6F9745",
+                "boarding_card_2",
+                "boarding_card_3"
+            ]
+        },
+        "boarding_card_2": {
+            "ocel:type": "boarding_card",
+            "ocel:ovmap": {
+                "gate": 6,
+                "boarding_time": 1662478758,
+                "luggage_delivered": true,
+                "security_check": true
+            },
+            "ocel:rmap": [
+                "Traveller_0x3294029B19C444907b813a5b44246F284e6F9745",
+                "flight_1",
+                "Ticket_2",
+                "Ticket_3",
+                "Luggage_1"
+            ]
+        },
+        "flight_1": {
+            "ocel:type": "flight",
+            "ocel:ovmap": {
+                "from": "Rome",
+                "to": "Florence",
+                "time_departure": 1662480557,
+                "time_arrival": 1662482357,
+                "state": "Departed",
+                "company": "Easyfly"
+            },
+            "ocel:rmap": [
+                "boarding_card_2",
+                "boarding_card_3"
+            ]
+        },
+        "boarding_card_3": {
+            "ocel:type": "boarding_card",
+            "ocel:ovmap": {
+                "gate": 6,
+                "boarding_time": 1662478758,
+                "luggage_delivered": true,
+                "security_check": true
+            },
+            "ocel:rmap": [
+                "Traveller_0x3294029B19C444907b813a5b44246F284e6F9745",
+                "flight_1",
+                "Ticket_2",
+                "Ticket_3",
+                "Luggage_1"
+            ]
+        },
+        "Luggage_1": {
+            "ocel:type": "Luggage",
+            "ocel:ovmap": {
+                "color": "black",
+                "weight": 10
+            },
+            "ocel:rmap": [
+                "boarding_card_2",
+                "Traveller_0x3294029B19C444907b813a5b44246F284e6F9745",
+                "boarding_card_3"
+            ]
+        }
+    }
+}

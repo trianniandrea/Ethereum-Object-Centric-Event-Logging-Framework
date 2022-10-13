@@ -1,0 +1,432 @@
+<log>
+	<global scope="event">
+		<string key="activity" value="__INVALID__" />
+	</global>
+	<global scope="object">
+		<string key="type" value="__INVALID__" />
+	</global>
+	<global scope="log">
+		<string key="ocel:version" value="1.0" />
+		<string key="ocel:ordering" value="timestamp" />
+		<list key="attribute-names">
+			<string key="attribute-name" value="from" />
+			<string key="attribute-name" value="to" />
+			<string key="attribute-name" value="value" />
+			<string key="attribute-name" value="gate" />
+			<string key="attribute-name" value="time_arrival" />
+			<string key="attribute-name" value="time_departure" />
+			<string key="attribute-name" value="weight" />
+			<string key="attribute-name" value="luggage_delivered" />
+			<string key="attribute-name" value="state" />
+			<string key="attribute-name" value="company" />
+			<string key="attribute-name" value="seat" />
+			<string key="attribute-name" value="name" />
+			<string key="attribute-name" value="class" />
+			<string key="attribute-name" value="color" />
+			<string key="attribute-name" value="nationality" />
+			<string key="attribute-name" value="boarding_time" />
+			<string key="attribute-name" value="security_check" />
+			<string key="attribute-name" value="surname" />
+		</list>
+		<list key="object-types">
+			<string key="object-type" value="Ticket" />
+			<string key="object-type" value="Traveller" />
+			<string key="object-type" value="boarding_card" />
+			<string key="object-type" value="Luggage" />
+			<string key="object-type" value="flight" />
+		</list>
+	</global>
+	<events>
+		<event>
+			<string key="id" value="0" />
+			<string key="activity" value="call_buy_trip" />
+			<string key="timestamp" value="2022-09-06 18:09:15" />
+			<list key="omap">
+				<string key="object-id" value="Ticket_0" />
+				<string key="object-id" value="Ticket_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="1" />
+			<string key="activity" value="call_check_in" />
+			<string key="timestamp" value="2022-09-06 18:09:15" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_0" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="2" />
+			<string key="activity" value="call_check_in" />
+			<string key="timestamp" value="2022-09-06 18:09:15" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="3" />
+			<string key="activity" value="call_deliver_luggage" />
+			<string key="timestamp" value="2022-09-06 18:09:16" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_0" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="4" />
+			<string key="activity" value="call_deliver_luggage" />
+			<string key="timestamp" value="2022-09-06 18:09:16" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="5" />
+			<string key="activity" value="call_security_control" />
+			<string key="timestamp" value="2022-09-06 18:09:16" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_0" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="6" />
+			<string key="activity" value="call_security_control" />
+			<string key="timestamp" value="2022-09-06 18:09:16" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="9" />
+			<string key="activity" value="call_buy_trip" />
+			<string key="timestamp" value="2022-09-06 18:09:18" />
+			<list key="omap">
+				<string key="object-id" value="Ticket_2" />
+				<string key="object-id" value="Ticket_3" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="10" />
+			<string key="activity" value="call_check_in" />
+			<string key="timestamp" value="2022-09-06 18:09:18" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_2" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="11" />
+			<string key="activity" value="call_check_in" />
+			<string key="timestamp" value="2022-09-06 18:09:19" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_3" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="12" />
+			<string key="activity" value="call_deliver_luggage" />
+			<string key="timestamp" value="2022-09-06 18:09:19" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_2" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="13" />
+			<string key="activity" value="call_deliver_luggage" />
+			<string key="timestamp" value="2022-09-06 18:09:19" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_3" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="14" />
+			<string key="activity" value="call_security_control" />
+			<string key="timestamp" value="2022-09-06 18:09:19" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_2" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="15" />
+			<string key="activity" value="call_security_control" />
+			<string key="timestamp" value="2022-09-06 18:09:19" />
+			<list key="omap">
+				<string key="object-id" value="boarding_card_3" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+		<event>
+			<string key="id" value="16" />
+			<string key="activity" value="call_start_flight" />
+			<string key="timestamp" value="2022-09-06 18:09:20" />
+			<list key="omap">
+				<string key="object-id" value="flight_1" />
+			</list>
+			<list key="vmap">
+				<string key="from" value="0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="to" value="0x5712Ec537622dCd15E32BfaC032568F0860bE7E4" />
+				<string key="value" value="0" />
+			</list>
+		</event>
+	</events>
+	<objects>
+		<object>
+			<string key="id" value="Ticket_0" />
+			<string key="type" value="Ticket" />
+			<list key="ovmap">
+				<string key="class" value="A" />
+				<string key="seat" value="19c" />
+			</list>
+			<list key="rmap">
+				<string key="Ticket_0" value="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="Ticket_0" value="boarding_card_0" />
+				<string key="Ticket_0" value="boarding_card_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+			<string key="type" value="Traveller" />
+			<list key="ovmap">
+				<string key="name" value="Andrea" />
+				<string key="surname" value="Trianni" />
+				<string key="nationality" value="Italy" />
+			</list>
+			<list key="rmap">
+				<string key="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="Ticket_0" />
+				<string key="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="Ticket_1" />
+				<string key="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="boarding_card_0" />
+				<string key="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="boarding_card_1" />
+				<string key="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" value="Luggage_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Ticket_1" />
+			<string key="type" value="Ticket" />
+			<list key="ovmap">
+				<string key="class" value="B" />
+				<string key="seat" value="19b" />
+			</list>
+			<list key="rmap">
+				<string key="Ticket_1" value="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="Ticket_1" value="boarding_card_0" />
+				<string key="Ticket_1" value="boarding_card_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="boarding_card_0" />
+			<string key="type" value="boarding_card" />
+			<list key="ovmap">
+				<string key="gate" value="1" />
+				<string key="boarding_time" value="1662478755" />
+				<string key="luggage_delivered" value="True" />
+				<string key="security_check" value="True" />
+			</list>
+			<list key="rmap">
+				<string key="boarding_card_0" value="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="boarding_card_0" value="Ticket_0" />
+				<string key="boarding_card_0" value="Ticket_1" />
+				<string key="boarding_card_0" value="Luggage_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="boarding_card_1" />
+			<string key="type" value="boarding_card" />
+			<list key="ovmap">
+				<string key="gate" value="1" />
+				<string key="boarding_time" value="1662478755" />
+				<string key="luggage_delivered" value="True" />
+				<string key="security_check" value="True" />
+			</list>
+			<list key="rmap">
+				<string key="boarding_card_1" value="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="boarding_card_1" value="Ticket_0" />
+				<string key="boarding_card_1" value="Ticket_1" />
+				<string key="boarding_card_1" value="Luggage_0" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Luggage_0" />
+			<string key="type" value="Luggage" />
+			<list key="ovmap">
+				<string key="color" value="blue" />
+				<string key="weight" value="20" />
+			</list>
+			<list key="rmap">
+				<string key="Luggage_0" value="boarding_card_0" />
+				<string key="Luggage_0" value="Traveller_0xCcf9C7e5076Ab00dcBFf9d5A3D6dfD0dfD0c4C71" />
+				<string key="Luggage_0" value="boarding_card_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Ticket_2" />
+			<string key="type" value="Ticket" />
+			<list key="ovmap">
+				<string key="class" value="B" />
+				<string key="seat" value="1c" />
+			</list>
+			<list key="rmap">
+				<string key="Ticket_2" value="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="Ticket_2" value="boarding_card_2" />
+				<string key="Ticket_2" value="boarding_card_3" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" />
+			<string key="type" value="Traveller" />
+			<list key="ovmap">
+				<string key="name" value="Giorgio" />
+				<string key="surname" value="Rossi" />
+				<string key="nationality" value="Italy" />
+			</list>
+			<list key="rmap">
+				<string key="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" value="Ticket_2" />
+				<string key="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" value="Ticket_3" />
+				<string key="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" value="boarding_card_2" />
+				<string key="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" value="boarding_card_3" />
+				<string key="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" value="Luggage_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Ticket_3" />
+			<string key="type" value="Ticket" />
+			<list key="ovmap">
+				<string key="class" value="B" />
+				<string key="seat" value="1b" />
+			</list>
+			<list key="rmap">
+				<string key="Ticket_3" value="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="Ticket_3" value="boarding_card_2" />
+				<string key="Ticket_3" value="boarding_card_3" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="boarding_card_2" />
+			<string key="type" value="boarding_card" />
+			<list key="ovmap">
+				<string key="gate" value="6" />
+				<string key="boarding_time" value="1662478758" />
+				<string key="luggage_delivered" value="True" />
+				<string key="security_check" value="True" />
+			</list>
+			<list key="rmap">
+				<string key="boarding_card_2" value="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="boarding_card_2" value="flight_1" />
+				<string key="boarding_card_2" value="Ticket_2" />
+				<string key="boarding_card_2" value="Ticket_3" />
+				<string key="boarding_card_2" value="Luggage_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="flight_1" />
+			<string key="type" value="flight" />
+			<list key="ovmap">
+				<string key="from" value="Rome" />
+				<string key="to" value="Florence" />
+				<string key="time_departure" value="1662480557" />
+				<string key="time_arrival" value="1662482357" />
+				<string key="state" value="Departed" />
+				<string key="company" value="Easyfly" />
+			</list>
+			<list key="rmap">
+				<string key="flight_1" value="boarding_card_2" />
+				<string key="flight_1" value="boarding_card_3" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="boarding_card_3" />
+			<string key="type" value="boarding_card" />
+			<list key="ovmap">
+				<string key="gate" value="6" />
+				<string key="boarding_time" value="1662478758" />
+				<string key="luggage_delivered" value="True" />
+				<string key="security_check" value="True" />
+			</list>
+			<list key="rmap">
+				<string key="boarding_card_3" value="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="boarding_card_3" value="flight_1" />
+				<string key="boarding_card_3" value="Ticket_2" />
+				<string key="boarding_card_3" value="Ticket_3" />
+				<string key="boarding_card_3" value="Luggage_1" />
+			</list>
+		</object>
+		<object>
+			<string key="id" value="Luggage_1" />
+			<string key="type" value="Luggage" />
+			<list key="ovmap">
+				<string key="color" value="black" />
+				<string key="weight" value="10" />
+			</list>
+			<list key="rmap">
+				<string key="Luggage_1" value="boarding_card_2" />
+				<string key="Luggage_1" value="Traveller_0x3294029B19C444907b813a5b44246F284e6F9745" />
+				<string key="Luggage_1" value="boarding_card_3" />
+			</list>
+		</object>
+	</objects>
+</log>

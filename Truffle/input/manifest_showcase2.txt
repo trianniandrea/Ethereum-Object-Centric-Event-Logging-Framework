@@ -1,0 +1,68 @@
+% Manifest Example for showcase1 project
+
+
+% ---- DEFINE THE MODEL (optional)---- %
+
+DEFINE_E2O_REL call_cancel_flight fligth 1 1
+DEFINE_E2O_REL call_start_flight flight 1 1
+DEFINE_E2O_REL call_buy_trip Ticket 1 N
+DEFINE_E2O_REL call_check_in boarding_card 1 1
+DEFINE_E2O_REL call_deliver_luggage boarding_card 1 1
+DEFINE_E2O_REL call_security_control boarding_card 1 1
+
+
+DEFINE_O2O_REL Ticket boarding_card 1 N 1 N
+DEFINE_O2O_REL Ticket Traveller 1 N 1 1
+DEFINE_O2O_REL Traveller boarding_card 1 1 1 N
+DEFINE_O2O_REL Traveller Luggage 1 1 1 N
+DEFINE_O2O_REL Luggage boarding_card 1 N 1 N
+DEFINE_O2O_REL boarding_card flight 1 N 1 1
+
+DEFINE_AREA 1  call_buy_trip call_check_in call_deliver_luggage call_security_control call_start_flight Ticket boarding_card flight
+DEFINE_AREA 2  call_start_flight call_cancel_flight flight
+
+DEFINE_CONSTRAINT NonCoexistence  call_start_flight call_cancel_flight 2
+DEFINE_CONSTRAINT Response  call_buy_trip call_check_in  1
+%DEFINE_CONSTRAINT UnaryPrecedence  call_deliver_luggage call_check_in   1
+DEFINE_CONSTRAINT Precedence  call_deliver_luggage call_check_in   1
+DEFINE_CONSTRAINT Precedence   call_security_control call_check_in  1
+DEFINE_CONSTRAINT Response  call_security_control call_start_flight   1
+
+% ---- LOGGING CONTRACT GENERATION ---- %
+
+DEFINE_LOGIC ./Truffle/showcase_2/build/contracts/Business.json inheritance 
+%RUN_GENERATE ./Truffle/output/contracts/showcase2_generated inheritance
+
+
+% ---- GRAB FROM LOCAL ---- %
+
+%DEFINE_CONNECTION  1 http://127.0.0.1:8545 0x5712Ec537622dCd15E32BfaC032568F0860bE7E4 ./Truffle/showcase_2/build/contracts/Wrapper.json
+%DEFINE_CONNECTION  1 http://127.0.0.1:8545 0x2EB41612b058409ee4202a6A235fc5122DEfA597 ./Truffle/showcase_2/build/contracts/Logging.json
+DEFINE_CONNECTION  1 http://127.0.0.1:8545 0xCA05fa6372Ee329cBB1099c3055AB21C9D3F5381 ./Truffle/showcase_2/build/contracts/Logging.json
+%RUN_GRAB scan 2000 0
+%RUN_GRAB listen 5
+%RUN_EXPORT xml ./Truffle/output/log/showcase2_local_report true
+%RUN_EXPORT json ./Truffle/output/log/showcase2_local_report  true
+
+
+% ---- PLOT EXAMPLE ---- %
+
+%RUN_IMPORT ./Truffle/output/log/showcase2_local_report.jsonocel 
+%RUN_PLOT  type 1 ./Truffle/output/plot/showcase2_local_report_l light
+%RUN_PLOT  id 1 ./Truffle/output/plot/showcase2_local_report_l light
+%RUN_PLOT  type 2 ./Truffle/output/plot/showcase2_local_report_l light
+%RUN_PLOT  id 2 ./Truffle/output/plot/showcase2_local_report_l light
+
+
+% ---- FILTER EXAMPLE ---- %
+
+%RUN_IMPORT ./Truffle/output/log/showcase2_local_report.jsonocel 
+%RUN_FILTER 
+%RUN_EXPORT json ./Truffle/output/log/showcase2_local_filtrato_report true
+%RUN_EXPORT xml ./Truffle/output/log/showcase2_local_filtrato_report true
+
+%RUN_PLOT  type 1 ./Truffle/output/plot/showcase2_local_filtrato_report_l light
+%RUN_PLOT  id 1 ./Truffle/output/plot/showcase2_local_filtrato_report_l light
+%RUN_PLOT  type 2 ./Truffle/output/plot/showcase2_local_filtrato_report_l light
+%RUN_PLOT  id 2 ./Truffle/output/plot/showcase2_local_filtrato_report_l light
+
